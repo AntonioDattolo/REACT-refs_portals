@@ -6,14 +6,15 @@ export default function Player() {
 
   function handleClick(){
     setPlayer(playerName.current.value);
+    playerName.current.value = ''
   }
-  
+
   // in questo modo è possibile ottnere l'output dell'input e salvarlo in una variabiale
   // avendo allo stesso modo un codice semplice e snello
 
   return (
     <section id="player">
-      <h2>Welcome {player ? player : 'unknown entity'}</h2>
+      <h2>Welcome {player}</h2>
       <p>
         <input 
           ref={playerName} 
